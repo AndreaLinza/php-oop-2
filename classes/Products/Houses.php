@@ -3,7 +3,7 @@
 require_once __DIR__ . "/../Product.php";
 
 
-class Foods extends Product
+class Houses extends Product
 {
 
     protected $img;

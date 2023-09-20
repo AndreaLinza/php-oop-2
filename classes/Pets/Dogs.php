@@ -2,7 +2,7 @@
 
 require_once __DIR__ . "/../Category.php";
 
-class Cats extends Category
+class Dogs extends Category
 
 {
 
@@ -10,13 +10,13 @@ class Cats extends Category
     protected $kinds;
     protected $icon;
     protected $age;
-    
 
 
     public function __construct()
     {
-        $this->icon = '<i class="fa-solid fa-cat"></i>';
+        $this->icon = '<i class="fa-solid fa-dog"></i>';
     }
+
 
     /**
      * Get the value of name

@@ -1,0 +1,51 @@
+nav{
+    position:fixed !important;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+}
+
+h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    position: relative;
+}
+
+.logo{
+    margin: 0 1rem;
+    width: 100px;
+}
+
+.nav-link{
+    color: rgb(24, 24, 26) !important;
+    padding: 1.2rem !important;
+    font-size: 1.1rem;
+}
+
+.card{
+    height: 100%;
+}
+
+.card-img-top{
+    height: 300px;
+}
+
+img{
+    object-fit: contain;
+    aspect-ratio: 1/1;
+}
+
+
+.fa-cat:before {
+    font-size: 25px;
+    content: "\f6be";
+}
+.fa-dog:before{
+    font-size: 25px;
+    content: "\f6d3"; 
+}
+
+.icon{
+    width: 35px;
+}
+
