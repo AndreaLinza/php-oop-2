@@ -1,6 +1,9 @@
 <?php
-require_once __DIR__ . '/classes/Products.php';
-require_once __DIR__ . '/classes/Kinds.php';
+require_once __DIR__ . '/classes/Product.php';
+require_once __DIR__ . '/classes/Category.php';
+require_once __DIR__ . "/classes/Products/Accessories.php";
+require_once __DIR__ . "/classes/Products/Foods.php";
+require_once __DIR__ . "/classes/Products/Toys.php";
 include_once __DIR__ . '/db/db.php';
 
 ?>
@@ -30,7 +33,7 @@ include_once __DIR__ . '/db/db.php';
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-warning">
         <div class="container">
-            <a class="navbar-brand fs-1 text-dark" href="#">Animal House</a>
+            <a class="navbar-brand fs-1 fw-bold text-dark " href="#">Animal House</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
