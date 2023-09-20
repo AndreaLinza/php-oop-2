@@ -77,6 +77,8 @@ require_once __DIR__ . '/db/db.php';
                         <div class="card-body">
                             <h5 class="card-title pb-3"><?php echo $product->getName()
                                                         ?></h5>
+                            <p class="card-text pb-3 fw-bold"><span>€</span><?php echo $product->getPrice()
+                                                        ?></p>
                             <p class="card-text pb-3"><?php echo $product->getCategory()
                                                         ?></p>
                         </div>

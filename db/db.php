@@ -29,11 +29,11 @@ $productsList =  [
         _price: 12
     ),
     new Toys(
-        _name: "Albero Secolare per grattarsi la schiena",
+        _name: "Albero secolare per la schiena",
         _category: $bear->getIcon(),
         _img: "https://www.uomoenatura.it/wp-content/uploads/2018/03/IL-GRANDE-FAGGIO-.jpg",
-        _price: 1155
-    ),
+        _price: 1400
+        ),
 
     new Toys(
         _name: "Tiragraffi Livia Rosa Antico",
@@ -45,14 +45,14 @@ $productsList =  [
         _name: "Salmone Giocattolo",
         _category: $bear->getIcon(),
         _img: "https://www.edilioparodi.com/easyUp/store/1251_100205_cp18.jpg",
-        _price: 45
+        _price: 40
     ),
 
     new Houses(
         _name: "La tua tenda",
         _category: $bear->getIcon(),
         _img: "https://www.campeggiosentinella.it/wp-content/uploads/2022/02/campeggio-salento-tende.jpg",
-        _price: 80
+        _price: 150
     ),
     
     new Houses(
@@ -65,7 +65,7 @@ $productsList =  [
         _name: "Grotta Mazzarese",
         _category: $bear->getIcon(),
         _img: "https://www.santamariaalbagno.info/wp-content/uploads/2021/03/d9867b50-87ae-4b3d-91b5-7623a42e4b62.jpg",
-        _price: 550
+        _price: 1400
     ),
     new Houses(
         _name: "Cuccia Rettangolare Calliope Petrolio",
@@ -104,7 +104,7 @@ $productsList =  [
         _name: "Salmone Norvegese",
         _category: $bear->getIcon(),
         _img: "https://www.mercatodelmare.it/wp-content/uploads/2020/04/filenameWEB_190-1.jpg",
-        _price: 10
+        _price: 70
     ),
 
     new Foods(
@@ -118,7 +118,7 @@ $productsList =  [
         _name: "Alveare pieno di ottimo miele",
         _category: $bear->getIcon(),
         _img: "https://www.igieneambiente.com/wp-content/uploads/2020/03/asportazione-alveare-torino.jpg",
-        _price: 20
+        _price: 15
     ),
     new Foods(
         _name: "Monge All Breeds Adult Salmone e Riso",
