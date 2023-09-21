@@ -77,10 +77,22 @@ require_once __DIR__ . '/db/db.php';
                         <div class="card-body">
                             <h5 class="card-title pb-3"><?php echo $product->getName()
                                                         ?></h5>
-                            <p class="card-text pb-3 fw-bold"><span>€</span><?php echo $product->getPrice()
-                                                        ?></p>
-                            <p class="card-text pb-3"><?php echo $product->getCategory()
-                                                        ?></p>
+                            <div class="d-flex ">
+
+                                <p class="card-text pb-3 fw-bold"><span>€</span><?php echo $product->getPrice()
+                                                                                ?></p>
+                                <div class="btn-group btn-group-sm h-25 ms-auto" role="group" aria-label="Basic outlined example">
+                                    <button type="button" class="btn btn-secondary w-100">-</button>
+                                    <button class="btn" disabled>1</button>
+                                    <button type="button" class="btn btn-secondary w-100">+</button>
+                                </div>
+
+                            </div>
+                            <div class="d-flex align-items-center ">
+                                <p class="card-text m-0"><?php echo $product->getCategory()
+                                                            ?></p>
+                                <button type="button" class="btn btn-warning ms-auto">Aggiungi al Carrello</button>
+                            </div>
                         </div>
                     </div>
                 </div>
