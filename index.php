@@ -65,7 +65,7 @@ require_once __DIR__ . '/db/db.php';
 
     <main class="container mt-5 py-5">
 
-        <div class="row row-cols-3 mt-5 py-5">
+        <div class="row row-cols-lg-3 row-cols-sm-2 mt-5 py-5">
             <?php
             foreach ($productsList as $product) {
             ?>
@@ -75,22 +75,33 @@ require_once __DIR__ . '/db/db.php';
                         <img src="<?php echo $product->getImg()
                                     ?>" class="card-img-top" alt="locandina">
                         <div class="card-body">
-                            <h5 class="card-title pb-3"><?php echo $product->getName()
-                                                        ?></h5>
-                            <div class="d-flex ">
+                            <?php
 
-                                <p class="card-text pb-3 fw-bold"><span>€</span><?php echo $product->getPrice()
-                                                                                ?></p>
-                                <div class="btn-group btn-group-sm h-25 ms-auto" role="group" aria-label="Basic outlined example">
-                                    <button type="button" class="btn btn-secondary w-100">-</button>
-                                    <button class="btn" disabled>1</button>
-                                    <button type="button" class="btn btn-secondary w-100">+</button>
+                            try {
+
+                                if (is_numeric($product->getName())) {
+                                    throw new Exception("La ricerca non può essere un numero");
+                                }
+                            ?>
+                                <h5 class="card-title pb-3"><?php echo $product->getName()
+                                                            ?></h5>
+                                <div class="d-flex ">
+
+                                    <p class="card-text pb-3 fw-bold"><span>Prezzo: </span> <span>€ </span><?php echo $product->getPrice()
+                                                                                                            ?></p>
+                                    <div class="btn-group btn-group-sm h-25 ms-auto" role="group" aria-label="Basic outlined example">
+                                        <input type="number" style="width: 60px;" placeholder="0" name="quantity" id="IdQuantity">
+                                    </div>
                                 </div>
+                            <?php
+                            } catch (Exception $error) {
+                                echo "<div class='alert alert-danger text-center fs-4'>" . $error->getMessage() . "</div>";
+                            } ?>
 
-                            </div>
-                            <div class="d-flex align-items-center ">
-                                <p class="card-text m-0"><?php echo $product->getCategory()
-                                                            ?></p>
+
+                            <div class="d-flex align-items-center">
+                                <p class="card-text mt-auto mb-0"><?php echo $product->getCategory()
+                                                                    ?></p>
                                 <button type="button" class="btn btn-warning ms-auto">Aggiungi al Carrello</button>
                             </div>
                         </div>

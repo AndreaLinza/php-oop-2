@@ -1,45 +1,27 @@
 <?php
-include_once __DIR__ . "/Pets/Bears.php";
-include_once __DIR__ . "/Pets/Cats.php";
-include_once __DIR__ . "/Pets/Dogs.php";
+require_once __DIR__ . "/Pets/Bears.php";
+require_once __DIR__ . "/Pets/Cats.php";
+require_once __DIR__ . "/Pets/Dogs.php";
+
 
 class Product
 {
-    
-    private $serial;
+
     protected $name;
     protected $imgProduct;
-    protected $company;
     protected $category;
-    
-    
-    
-    public function __construct( string $_name, int $_serial, $_category){
 
-        $this->name = $_name;
-        $this->serial = $_serial;        
-        $this->category = $_category;
 
-    }
-    
-    
-/**
-     * Get the value of serial
-     */
-    public function getSerial()
+
+    public function __construct(string $_name, string $_category)
     {
-        return $this->serial;
+
+        $this->setName($_name);
+        $this->setCategory($_category);
     }
 
-    /**
-     * Set the value of serial
-     */
-    public function setSerial($serial): self
-    {
-        $this->serial = $serial;
 
-        return $this;
-    }
+
 
     /**
      * Get the value of imgProduct
@@ -70,30 +52,13 @@ class Product
     /**
      * Set the value of name
      */
-    public function setName($name): self
+    public function setName($name)
     {
         $this->name = $name;
 
         return $this;
     }
 
-    /**
-     * Get the value of company
-     */
-    public function getCompany()
-    {
-        return $this->company;
-    }
-
-    /**
-     * Set the value of company
-     */
-    public function setCompany($company): self
-    {
-        $this->company = $company;
-
-        return $this;
-    }
 
     /**
      * Get the value of category

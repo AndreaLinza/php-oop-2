@@ -1,12 +1,12 @@
 <?php
-
+require_once __DIR__ . "/../../traits/NecessaryData.php";
 require_once __DIR__ . "/../Product.php";
 
 
 class Toys extends Product
 {
 
-
+    use NecessaryData;
     protected $img;
     protected $tipology;
     protected $price;
@@ -18,8 +18,8 @@ class Toys extends Product
     public function __construct( string $_name, $_category, string $_img, int $_price,)
     {
 
-        $this->name = $_name;
-        $this->category = $_category;
+        $this->setName($_name);
+        $this->setCategory($_category);
         $this->img = $_img;
         $this->price = $_price;
         

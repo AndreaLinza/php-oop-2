@@ -1,11 +1,11 @@
 <?php
-
+require_once __DIR__ . "/../../traits/NecessaryData.php";
 require_once __DIR__ . "/../Product.php";
 
 
 class Foods extends Product
 {
-
+    use NecessaryData;
     protected $img;
     protected $tipology;
     protected $price;
